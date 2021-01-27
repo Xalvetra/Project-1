@@ -1,0 +1,52 @@
+package fungsi2;
+
+import java.util.Scanner;
+
+public class Tugas5 {
+
+    public static int sdhPro(int i) {
+        if(i <= 2) {
+            return 0;
+        } else if(i == 3) {
+            return 1;
+        } else {
+            //fungsi rekrusif fibo
+            return sdhPro(i - 1) + sdhPro(i - 2);
+        }
+    }
+
+    public static int blmPro(int i) {
+        if(i == 0) {
+            return 0;
+        } else if(i <= 3) {
+            return 1;
+        } else {
+            //fungsi rekrusif fibo
+            return blmPro(i - 1) + blmPro(i - 2);
+        }
+    }
+
+    public static int total(int i) {
+        if(i == 0) {
+            return 0;
+        } else if(i == 1) {
+            return 1;
+        } else {
+            //fungsi rekrusif fibo
+            return total(i - 1) + total(i - 2);
+        }
+    }
+
+    public static void main(String[] args) {
+        int bln;
+        Scanner faris = new.Scanner(System.in);
+        System.out.println("Perhitungan pembiakan kelinci");
+        System.out.println("==================================");
+        System.out.print("Masukan awal bulan : ");
+        bln = faris.nextInt();
+
+        System.out.println("\nJumlah pasangan produktif = " + sdhPro(i));
+        System.out.println("Jumlah pasangan belum produktif = " + blmPro(i));
+        System.out.print("Total pasangan = " + total(i));
+    }
+}
